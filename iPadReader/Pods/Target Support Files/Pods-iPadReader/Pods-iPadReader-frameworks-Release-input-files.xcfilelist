@@ -1,0 +1,10 @@
+${PODS_ROOT}/Target Support Files/Pods-iPadReader/Pods-iPadReader-frameworks.sh
+${BUILT_PRODUCTS_DIR}/DTCoreText/DTCoreText.framework
+${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/QMUIKit/QMUIKit.framework
+${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework
+${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework
+${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework
+${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework

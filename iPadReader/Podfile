@@ -1,0 +1,46 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '9.0'
+ inhibit_all_warnings!
+
+target 'iPadReader' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iPadReader
+  #架构
+ pod 'QMUIKit', '~> 4.0.0-beta'
+
+  #布局
+  pod 'Masonry', '~> 1.1.0'
+
+  
+  pod 'MBProgressHUD', '~> 1.1.0'
+  #富文本
+  #pod 'RTLabel', '~> 1.0.1'
+  #pod 'YYText', '~> 1.0.7'
+  pod 'DTCoreText', '~> 1.6.21'
+
+  # Model
+  pod 'YYModel', '~> 1.0.4'
+  pod 'YYCache', '~> 1.0.4'
+  pod 'YYCategories', '~> 1.0.4'
+
+  
+  #解压zip文件
+  pod 'SSZipArchive', '~> 2.1.4'
+
+end
+
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+
+        # Pod文件在Debug模式下不进行编译优化,提升编译速度
+        if config.name.include?("CDDebug")
+                  config.build_settings['GCC_OPTIMIZATION_LEVEL'] = '0'
+               end
+        end
+    end
+end

@@ -1,0 +1,69 @@
+//
+//  CD_PrefixHeader.pch
+//  CDCountdownTimerLabel
+//
+//  Created by cqz on 2019/3/7.
+//  Copyright © 2019 ChangDao. All rights reserved.
+//
+
+#ifndef CD_PrefixHeader_pch
+#define CD_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "CDMacroDefine.h"
+
+
+#import <QMUIKit/QMUIKit.h>
+#import "QDCommonUI.h"
+#import "QDUIHelper.h"
+#import "QDThemeManager.h"
+//加载框
+#import "MBProgressHUD+Tools.h"
+
+//布局
+#import <Masonry.h>
+
+#import <YYModel/YYModel.h>
+#import <YYCache/YYCache.h>
+#import <YYCategories/YYCategories.h>
+
+
+#import "CDFontUtils.h"
+
+#import "CDAppUtils.h"
+#import "CDToastService.h"
+
+
+#import "CDBookEpubModel.h"
+#import "CDBookSQLiteManager.h"
+
+
+typedef NS_ENUM(NSInteger, CDAPPErrorStatus) {
+    
+    //MARK: - 服务器返回信息
+    /**
+     * 请求成功
+     */
+    CDAPPErrorStatusSuccess = 0,
+    /**
+     * 登录超时
+     */
+    CDAPPErrorStatusTimeout = -1,
+    
+    CDAPPErrorStatusError = 10001,
+    /**
+     * 网络数据为空
+     */
+    CDAPPErrorStatusEmpty = -2,
+    
+    /**
+     * 请求失败
+     */
+    CDAPPErrorStatusFail = 10000,
+};
+
+
+
+#endif /* CD_PrefixHeader_pch */
